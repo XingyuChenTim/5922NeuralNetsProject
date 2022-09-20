@@ -7,6 +7,7 @@
 -	The dataset gathers from Twitter and analyze the influence operations
 -	The goal of this project is to filter out the dataset and provide a general view of Roe vs. Wade case, probably involving sentiment analysis. 
 - Data visualization will be created to present for people who want to quickly understand the whole case
+- The trained neural networks from this dataset will test some unlabeled tweets gathered from API
 
 ### Dataset description
 Dataset of 56040 tweets collected in wake of the Roe vs. Wade cancellation sentence. 
