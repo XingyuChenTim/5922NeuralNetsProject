@@ -9,13 +9,6 @@
 - Data visualization will be created to present for people who want to quickly understand the whole case
 - The trained neural networks from this dataset will test some unlabeled tweets gathered from API
 
-### Dataset description
-Dataset of 56040 tweets collected in wake of the Roe vs. Wade cancellation sentence. 
-
-The tweets are collected conteining either the #prochoice or the #prolife hashtag, reflecting the two opposite poles of the discussion on the argument.
-
-The tweets with #prochoice have target variable as 0, and the tweet with the #prolife have the target variable as 1.
-
 ### Proposed Methodology
 -	I plan to clean up the tweets and find the pattern of tweets based on the timeline of the event, provide a lot of time-series data visualization to help audience to know the general view
 -	There will be a lot of misinformation bots in the Tweets, hopefully can identify them and filter them out
@@ -28,7 +21,16 @@ The tweets with #prochoice have target variable as 0, and the tweet with the #pr
 - What is the frequency of tweets during the whole time line?
 - What are the words that contribute to prolife/prochoice?
 
-## DATA PREPARE
+## DATA GATHERING
+Dataset of 56040 tweets collected in wake of the Roe vs. Wade cancellation sentence. 
+
+The tweets are collected conteining either the #prochoice or the #prolife hashtag, reflecting the two opposite poles of the discussion on the argument.
+
+The tweets with #prochoice have target variable as 0, and the tweet with the #prolife have the target variable as 1.
+
+I will use twitter API to gather unlabeled tweets, the credential will not be viewable in Github. 
+
+## DATA PREP
 Please see the jupyter notebook for details. 
 
 Original:  
@@ -36,9 +38,6 @@ Original:
 
 Clean:  
 ![clean](./image/clean.png)
-
-
-
 
 ## DISCLAIMER
 This dataset is not intended to be used to take a position on the discussion on the right to abortion. This dataset takes its cue from this discussion to create a corpus of tweets that can be tagged a priori.  
