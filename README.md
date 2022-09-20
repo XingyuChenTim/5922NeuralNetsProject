@@ -1,6 +1,6 @@
 # 5922 Neural Nets Project
 
-## Introduction
+## INTRODUCTION
 
 ### Project Goal/Problem definition
 -	This project will be focus on how to use neural networds to analyze the tweets about prochoice VS prolife due to the Roe vs. Wade cancellation sentence. 
@@ -9,8 +9,11 @@
 - Data visualization will be created to present for people who want to quickly understand the whole case
 
 ### Dataset description
--	The dataset is originally from Twitter but there is already available dataset from Kaggle. The dataset has 56,040 Tweets 
--	The dataset has id, retweet_count, reply_count, like_count, text columns. 
+Dataset of 56040 tweets collected in wake of the Roe vs. Wade cancellation sentence. 
+
+The tweets are collected conteining either the #prochoice or the #prolife hashtag, reflecting the two opposite poles of the discussion on the argument.
+
+The tweets with #prochoice have target variable as 0, and the tweet with the #prolife have the target variable as 1.
 
 ### Proposed Methodology
 -	I plan to clean up the tweets and find the pattern of tweets based on the timeline of the event, provide a lot of time-series data visualization to help audience to know the general view
@@ -24,5 +27,12 @@
 - What is the frequency of tweets during the whole time line?
 - What are the words that contribute positive/negative to sentiment?
 
-## Data Prepare
+## DATA PREPARE
 Please see the jupyter notebook
+
+## DISCLAIMER
+This dataset is not intended to be used to take a position on the discussion on the right to abortion. This dataset takes its cue from this discussion to create a corpus of tweets that can be tagged a priori.  
+
+In this case, I am taking advantage of the fact that there are two hashtags that reflect the two opposite poles of opinions on the subject: prochoice and prolife respectively (indicated in this way only for alphabetical order, as well as labeled as 0 and 1 purely in order alphabetical).  
+
+Rather, considerations can be made about the discussion itself, the differences in language and the methods of analyzing it.
