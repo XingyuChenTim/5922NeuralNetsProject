@@ -28,7 +28,16 @@ The tweets with #prochoice have target variable as 0, and the tweet with the #pr
 - What are the words that contribute to prolife/prochoice?
 
 ## DATA PREPARE
-Please see the jupyter notebook
+Please see the jupyter notebook for details. 
+
+Original:  
+![original](./image/original.png)
+
+Clean:  
+![clean](./image/clean.png)
+
+
+
 
 ## DISCLAIMER
 This dataset is not intended to be used to take a position on the discussion on the right to abortion. This dataset takes its cue from this discussion to create a corpus of tweets that can be tagged a priori.  
