@@ -21,11 +21,11 @@ The tweets with #prochoice have target variable as 0, and the tweet with the #pr
 -	The word cloud will not be the only way to show the text features, try different plots to show text findings
 
 ### Five questions that I want to try to answer:
-- How is people reaction changed between jury date?
+- How is people reaction changes between dates?
 - How is the opinion related to location? 
-- What is the sentiment for people after each jury date?
+- Can we use this neural nets to predict tweets (unlabeled) opinion?
 - What is the frequency of tweets during the whole time line?
-- What are the words that contribute positive/negative to sentiment?
+- What are the words that contribute to prolife/prochoice?
 
 ## DATA PREPARE
 Please see the jupyter notebook
