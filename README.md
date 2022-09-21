@@ -1,7 +1,5 @@
 # 5922 Neural Nets Project
 
-# MODULE 1
-
 ## INTRODUCTION
 
 ### Project Goal/Problem definition
