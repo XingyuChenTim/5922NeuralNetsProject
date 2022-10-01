@@ -1,6 +1,6 @@
 # Pro-Choice vs. Pro-Life: Tweets Exploratory Data Analysis
 
-### To see a scientific format of paper, please open the scientific_format_paper.docx in the GitHub. 
+### To see a scientific format of paper, please open the scientific_format_paper.docx in the paper folder in the GitHub. 
 
 # Introduction
 
