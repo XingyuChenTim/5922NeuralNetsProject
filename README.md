@@ -17,6 +17,7 @@ In this paper, I will do an exploratory data analysis on tweets about pro-choice
 Fig 1. Abortion-rights movements
 
 # Data Gather and Prep
+This paper is not focus on text preprocessing (Natural language programming) but focus on neural network so I include essential steps about text preprocessing instead of detailed step-by-step explanation.  
 
 ## Clean tweets
 The dataset of 56,040 tweets collected in wake of the Roe vs. Wade cancellation sentence and analyze the influence operations. The tweets are collected containing either the #prochoice or the #prolife hashtag, reflecting the two opposite poles of the discussion on the argument.
