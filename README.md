@@ -20,7 +20,7 @@ Fig 1. Abortion-rights movements
 
 This paper is not focus on text preprocessing (Natural language programming) but focus on neural network, so I include essential steps about text preprocessing instead of detailed step-by-step explanation.
 
-![original](./image/fig_2.jpg)
+![original](./image/fig_2.png)
 
 Fig 2. Original dataset, contain raw tweets and other features
 
@@ -28,7 +28,7 @@ The dataset of 56,040 tweets collected in wake of the Roe vs. Wade cancellation 
 
 The tweets with #prochoice have target variable as 0, and the tweet with the #prolife have the target variable as 1. I would use Twitter API to gather unlabeled tweets but here is not reveal any credential and code during current stage.
 
-![original](./image/fig_3.jpg)
+![original](./image/fig_3.png)
 
 Fig 3. Preprocess Datetime using strptime library.
 
@@ -42,25 +42,25 @@ I use datetime module to fix the formatting of the date column. I will also be u
 6. Remove non-alphanumeric characters
 7. Remove stop words
 
-![original](./image/fig_4.jpg)
+![original](./image/fig_4.png)
 
 Fig 4. Preprocess tweets based on tasks
 
-![original](./image/fig_5.jpg)
+![original](./image/fig_5.png)
 
 Fig 5. Preprocess text into numerical values
 
-![original](./image/fig_6.jpg)
+![original](./image/fig_6.png)
 
 Fig 6. Train set
 
-![original](./image/fig_7.jpg)
+![original](./image/fig_7.png)
 
 Fig 7. Test set
 
 # NN w/ BP Architecture and Design
 
-![original](./image/fig_8.jpg)
+![original](./image/fig_8.png)
 
 Fig 8. Neural Net structure
 
@@ -80,11 +80,11 @@ The accuracy score is:
 
 0.7841847333937038
 
-![original](./image/fig_9.jpg)
+![original](./image/fig_9.png)
 
 Fig 9. Total loss
 
-![original](./image/fig_10.jpg)
+![original](./image/fig_10.png)
 
 Fig 10. Average Loss
 
