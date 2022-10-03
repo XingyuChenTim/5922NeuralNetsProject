@@ -116,7 +116,7 @@ TBD
 
 ##### References
 
-[1] J. Alupotha, (2018, March 16). How to calculate the hash of a block in bitcoin? Retrieved November 29, 2020, from https://medium.com/hackergirl/how-to-calculate-the-hash-of-a-block-in-bitcoin-8f6aebb0dc6d
+[1]
 
 [2]
 
