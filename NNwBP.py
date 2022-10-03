@@ -7,13 +7,15 @@ import pandas as pd
 filename = "./data/clean.csv"
 DF = pd.read_csv(str(filename))
 print(DF.head())
-
+from sklearn.model_selection import train_test_split
+train, test = train_test_split(DF, test_size=0.33)
 # n = len(DF)  # number of rows of entire X
-n = 100
+n = len(train)
 # Take the label off of X and make it a numpy array
-X = np.array(DF.iloc[:100, [1, 2, 3, 4, 5]])
+TrainLabel = train["target"]
+X = np.array(train.drop('target', axis=1))
 # Set y to the label. Check the shape!
-y = np.array(DF.iloc[:100, 0]).T
+y = np.array(TrainLabel).T
 y = np.array([y]).T
 print("y is\n", y)
 LR = .01
@@ -188,13 +190,27 @@ for i in range(Epochs):
     print("Average Loss:", .5 * (np.mean(np.square((output - y)))))
     AverageLoss.append(.5 * (np.mean(np.square((output - y)))))
 
+
+TestLabel = test["target"]
+test = test.drop('target', axis=1)
+
 ## COnfusion Matrix Accuracies
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 # print(y)
 # print(np.round(output))
+# print("\nThe true test labels are:")
+# print(TestLabel)
+# print("\nThe predict test labels are:")
+# print(NN.FeedForward(test))
+# cnf_matrix = confusion_matrix(TestLabel, np.round(NN.FeedForward(test)))
 cnf_matrix = confusion_matrix(y, np.round(output))
 print("\nThe confusion matrix is:")
 print(cnf_matrix)
+
+cnf = accuracy_score(y, np.round(output))
+print("\nThe accuracy score is:")
+print(cnf)
 # Plot
 
 fig1 = plt.figure()

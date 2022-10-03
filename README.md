@@ -4,9 +4,9 @@
 
 # Introduction
 
-The 1973 Roe vs. Wade decision, legalizing abortion in all fifty states, seems to solve one of the most controversial issues in terms of abortion. However, on June 24, 2022, the Supreme Court issued a bill to prohibits a person's ability to access out-of-state abortion services and ban abortions after 15 weeks of pregnancy nationwide, which is overturning Roe v. Wade case.
+The 1973 Roe vs. Wade decision, legalizing abortion in all fifty states, seems to solve one of the most controversial issues in terms of abortion. However, on June 24, 2022, the Supreme Court issued a bill to prohibits a women's ability to access out-of-state abortion services and ban abortions after 15 weeks of pregnancy nationwide, which is overturning Roe v. Wade case.
 
-The Congress's decision has drawn a lot of attention on social media, especially for female aspect. The argument divides into two opinions: Pro-Choice vs. Pro-Life. People who support pro-choice believe that everyone has the basic human right to decide when and whether to have children, which means they think it is OK for them to have the ability to choose abortion as an option for an unplanned pregnancy – even if you wouldn't choose abortion for yourself.
+The Congress's decision has drawn a lot of attention on social media, especially for female aspect. The argument divides into two opinions: Pro-Choice vs. Pro-Life. People who support pro-choice believe that everyone has the basic human right to decide when and whether to have children, which means they think it is OK for them to have the ability to choose abortion as an option for an unplanned pregnancy – even if you wouldn't choose abortion for yourself. The view that a woman should have the legal right to an elective abortion, meaning the right to terminate her pregnancy.
 
 People who support pro-life believe that the life of the fertilized egg, embryo, or fetus is much important than the welfare of children after they are born and oppose child welfare legislation. The controversial issues pit people against each other, as if they are on two different teams. Most Americans believe abortion should be legal because it is human rights to access abortion.
 
@@ -17,59 +17,98 @@ In this paper, I will do an exploratory data analysis on tweets about pro-choice
 Fig 1. Abortion-rights movements
 
 # Data Gather and Prep
-This paper is not focus on text preprocessing (Natural language programming) but focus on neural network so I include essential steps about text preprocessing instead of detailed step-by-step explanation.  
 
-## Clean tweets
+This paper is not focus on text preprocessing (Natural language programming) but focus on neural network, so I include essential steps about text preprocessing instead of detailed step-by-step explanation.
+
+![original](./image/fig_2.jpg)
+
+Fig 2. Original dataset, contain raw tweets and other features
+
 The dataset of 56,040 tweets collected in wake of the Roe vs. Wade cancellation sentence and analyze the influence operations. The tweets are collected containing either the #prochoice or the #prolife hashtag, reflecting the two opposite poles of the discussion on the argument.
 
 The tweets with #prochoice have target variable as 0, and the tweet with the #prolife have the target variable as 1. I would use Twitter API to gather unlabeled tweets but here is not reveal any credential and code during current stage.
 
-I use datetime module to fix the formatting of the date column. I will also be using regular expressions to fix the structure of the text and remove unnecessary ascii symbols. Here is the list of text preprocessing tasks:
+![original](./image/fig_3.jpg)
 
-1. Lowercase all the letters
-2. Remove twitter handlers
-3. Remove mentions '@'
-4. Remove hash tags because we have already labeled the dataset
-5. Remove URLs, start with 'http' or 'www'
-6. Remove punctuations
-7. Remove all single characters
-8. Remove non-alphanumeric characters
-9. Remove stop words
-10. Substituting multiple spaces with single space
+Fig 3. Preprocess Datetime using strptime library.
 
-Images …
+I use datetime module to fix the formatting of the date column. I will also be using regular expressions to fix the structure of the text and remove unnecessary ascii symbols because tweets can contain a lot of things such as mentions, hashtags, links, punctuations, and etc. Here is the list of text preprocessing tasks:
 
-## Format date
+1. Lowercasing all the letters
+2. Remove mentions '@'
+3. Remove hash tags '#'
+4. Remove URLs, start with 'http' or 'www'
+5. Remove punctuations
+6. Remove non-alphanumeric characters
+7. Remove stop words
 
-## Featurize texts (Natural Language Processing)
+![original](./image/fig_4.jpg)
 
-# Design Goals
+Fig 4. Preprocess tweets based on tasks
 
-I will use neural networks to answer following questions:
+![original](./image/fig_5.jpg)
 
-1. How is people reaction changes between dates?
-2. Can we use this neural nets to predict tweets opinion?
-3. What is the frequency of tweets during the whole timeline?
-4. What are the words that contribute to pro-life/pro-choice
+Fig 5. Preprocess text into numerical values
 
+![original](./image/fig_6.jpg)
 
-# Architecture and Design
+Fig 6. Train set
 
-TBD
+![original](./image/fig_7.jpg)
 
-# Wireframes
+Fig 7. Test set
 
-TBD
+# NN w/ BP Architecture and Design
+
+![original](./image/fig_8.jpg)
+
+Fig 8. Neural Net structure
+
+Iteration 1000
+
+Total Loss: 4840.214395017918
+
+Average Loss: 0.12891424905497037
+
+The confusion matrix is:
+
+[[10232 8087]
+
+[16 19211]]
+
+The accuracy score is:
+
+0.7841847333937038
+
+![original](./image/fig_9.jpg)
+
+Fig 9. Total loss
+
+![original](./image/fig_10.jpg)
+
+Fig 10. Average Loss
 
 # Sample Execution
 
-TBD
+TBD 
 
 # Conclusion
 
-This dataset is not intended to be used to take a position on the discussion on the right to abortion. This dataset takes its cue from this discussion to create a corpus of tweets that can be tagged a priori.
+This dataset is not intended to be used to take a position on the discussion on the right to abortion. I focus on the ethical arguments and underlying issues rather than on political considerations that might also be involved. This dataset takes its cue from this discussion to create a corpus of tweets that can be tagged a priori.
 
-The network intended to predict the tweets is supporting pro-life or pro-choice, the input vector is date and text
+I use neural networks intended to answer following questions:
+
+1. How is people reaction changes between dates?
+
+2. Can we use the neural net to predict tweets opinion?
+
+3. What is the frequency of tweets during the whole timeline?
+
+4. What are the words that contribute to pro-life/pro-choice
+
+For now, the epoch is 1000 and learning rate 0.01 with sample size 37,546, we get 78% accuracy. Parameter tuning will be used during next tasks.
+
+The network intended to predict the tweets is supporting pro-life or pro-choice, the input vector is retweet\_count, like\_count, words\_count, sentence\_length, and hour.
 
 ##### Acknowledgment
 
