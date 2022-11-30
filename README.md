@@ -13,14 +13,14 @@ This paper will present an exploratory data analysis on tweets about pro-choice 
 
 More specifically, the model should provide a decent result so people can learn primary online users' opinions behind the case. In addition, this model should facilitate decision-makers in Congress to pass bills involving controversial issues because it generates local and global impacts at a certain level.   
 
-![original](img/fig_1.jpg)
+![original](img/fig_1.jpg)  
 Fig 1. Abortion-rights movements
 # Data Gather
 The dataset of 56,040 tweets was collected in the wake of the Roe vs. Wade cancellation sentence and analyzed the influence operations. The dataset is available to download from the Kaggle website, which lists in the reference.    
 
 The tweets are collected containing either the #prochoice or the #prolife hashtag, reflecting the two opposite poles of the discussion. The tweets with #prochoice have a target variable of 0, and the tweet with the #prolife has a target variable of 1.  
         
-![original](img/fig_2.png)
+![original](img/fig_2.png)  
 Fig 2. Original dataset   
 
 Other columns, such as 'created_at', 'retweet_count', and 'like_count', can be valuable features for the data model. On the other hand, the 'author_name', 'author_username', and other columns are irrelevant to this paper and will be omitted during the data preprocessing.  
@@ -29,7 +29,7 @@ In addition to the original dataset, newsapi.org provide API to gather unlabeled
 
 The server will respond in JSON format with the date, title, headline, and source. Then the JSON format transforms into a large CSV file where each article is in a row. Adding one column that either abortion or antiabortion to convert this data into a labeled data frame so model train and test with the data.  
 
-![original](img/fig_3.png)
+![original](img/fig_3.png)  
 
 Fig 3. Dataset retrieved from API
 # Data Prep
