@@ -1,5 +1,6 @@
 # Pro-Choice vs. Pro-Life: Tweets Exploratory Data Analysis
 
+### To reproduce the result, please rerun the cells in jupyter notebook
 ### To see a scientific format of paper, please see paper.docx
 
 # Introduction
