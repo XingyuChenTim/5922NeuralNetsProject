@@ -1,6 +1,6 @@
 # Pro-Choice vs. Pro-Life: Tweets Exploratory Data Analysis
 
-### To see a scientific format of paper, please open the scientific_format_paper.docx in the paper folder in the GitHub. 
+### To see a scientific format of paper, please see paper.docx
 
 # Introduction
 The 1973 Roe vs. Wade decision, legalizing abortion in all fifty states, seems to solve one of the most controversial issues in terms of abortion. However, on June 24, 2022, the Supreme Court issued a bill prohibiting women's access to out-of-state abortion services. Additionally, the Court banned abortions nationwide after 15 weeks of pregnancy, which overturned the Roe v. Wade case.  
