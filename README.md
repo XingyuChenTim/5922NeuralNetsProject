@@ -3,16 +3,17 @@
 ### To see a scientific format of paper, please open the scientific_format_paper.docx in the paper folder in the GitHub. 
 
 # Introduction
+The 1973 Roe vs. Wade decision, legalizing abortion in all fifty states, seems to solve one of the most controversial issues in terms of abortion. However, on June 24, 2022, the Supreme Court issued a bill prohibiting women's access to out-of-state abortion services. Additionally, the Court banned abortions nationwide after 15 weeks of pregnancy, which overturned the Roe v. Wade case.  
 
-The 1973 Roe vs. Wade decision, legalizing abortion in all fifty states, seems to solve one of the most controversial issues in terms of abortion. However, on June 24, 2022, the Supreme Court issued a bill to prohibits a women's ability to access out-of-state abortion services and ban abortions after 15 weeks of pregnancy nationwide, which is overturning Roe v. Wade case.
+The Congress's decision has drawn much attention on social media, especially from females. The argument divides into two opinions: Pro-Choice vs. Pro-Life. People who support pro-choice believe everyone has the fundamental human right to decide when and whether to have children. They think it is OK for them to have the ability to choose abortion as an option for an unplanned pregnancy – even if they would not choose abortion for themselves. The view is that a woman should have the legal right to an elective abortion, meaning the right to terminate her pregnancy.   
 
-The Congress's decision has drawn a lot of attention on social media, especially for female aspect. The argument divides into two opinions: Pro-Choice vs. Pro-Life. People who support pro-choice believe that everyone has the basic human right to decide when and whether to have children, which means they think it is OK for them to have the ability to choose abortion as an option for an unplanned pregnancy – even if you wouldn't choose abortion for yourself. The view that a woman should have the legal right to an elective abortion, meaning the right to terminate her pregnancy.
+People who support pro-life believe that the life of the fertilized egg, embryo, or fetus is much more critical. They despise children's welfare after birth and oppose child welfare legislation. The controversial issues pit people against each other like they are on two teams. Most Americans believe abortion should be legal because it is the human right to access abortion.   
 
-People who support pro-life believe that the life of the fertilized egg, embryo, or fetus is much important than the welfare of children after they are born and oppose child welfare legislation. The controversial issues pit people against each other, as if they are on two different teams. Most Americans believe abortion should be legal because it is human rights to access abortion.
+This paper will present an exploratory data analysis on tweets about pro-choice vs. pro-life. It is helpful for review for people who want to have a general idea about how people react to the bill that bans abortion in certain states, especially for females. The neural network model helps them to grasp a pragmatic understanding of the whole event timeline.   
 
-In this paper, I will do an exploratory data analysis on tweets about pro-choice vs. pro-life due to the Roe vs. Wade cancellation sentence. It is to be used for review for people want to have a general idea about how people reaction to the bill that ban abortion in certain states, especially for female. The neural network model helps them to grasp pragmatic understanding of whole event timeline. More specifically, the model should offer decent result so people can learn basic opinion behind the case. In addition, I also hope this model will facilitate decision maker in Congress to pass bill that involving controversial issues because it generates local impact and global impact in certain level.
+More specifically, the model should provide a decent result so people can learn primary online users' opinions behind the case. In addition, this model should facilitate decision-makers in Congress to pass bills involving controversial issues because it generates local and global impacts at a certain level.   
 
-![original](./image/fig_1.jpg)
+![original](img/fig_1.jpg)
 
 Fig 1. Abortion-rights movements
 
@@ -20,7 +21,7 @@ Fig 1. Abortion-rights movements
 
 This paper is not focus on text preprocessing (Natural language programming) but focus on neural network, so I include essential steps about text preprocessing instead of detailed step-by-step explanation.
 
-![original](./image/fig_2.png)
+![original](img/fig_2.png)
 
 Fig 2. Original dataset, contain raw tweets and other features
 
@@ -28,7 +29,7 @@ The dataset of 56,040 tweets collected in wake of the Roe vs. Wade cancellation 
 
 The tweets with #prochoice have target variable as 0, and the tweet with the #prolife have the target variable as 1. I would use Twitter API to gather unlabeled tweets but here is not reveal any credential and code during current stage.
 
-![original](./image/fig_3.png)
+![original](img/fig_3.png)
 
 Fig 3. Preprocess Datetime using strptime library.
 
@@ -42,25 +43,25 @@ I use datetime module to fix the formatting of the date column. I will also be u
 6. Remove non-alphanumeric characters
 7. Remove stop words
 
-![original](./image/fig_4.png)
+![original](img/fig_4.png)
 
 Fig 4. Preprocess tweets based on tasks
 
-![original](./image/fig_5.png)
+![original](img/fig_5.png)
 
 Fig 5. Preprocess text into numerical values
 
-![original](./image/fig_6.png)
+![original](img/fig_6.png)
 
 Fig 6. Train set
 
-![original](./image/fig_7.png)
+![original](img/fig_7.png)
 
 Fig 7. Test set
 
 # NN w/ BP Architecture and Design
 
-![original](./image/fig_8.png)
+![original](img/fig_8.png)
 
 Fig 8. Neural Net structure
 
@@ -80,11 +81,11 @@ The accuracy score is:
 
 0.7841847333937038
 
-![original](./image/fig_9.png)
+![original](img/fig_9.png)
 
 Fig 9. Total loss
 
-![original](./image/fig_10.png)
+![original](img/fig_10.png)
 
 Fig 10. Average Loss
 
