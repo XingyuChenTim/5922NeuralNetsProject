@@ -83,8 +83,21 @@ Fig 7. Average loss
 
 ##### References
 
-[1]
+[1]  Twitter supervised dataset - prochoice VS prolife. (n.d.). Retrieved December 3, 2022, from
+https://www.kaggle.com/datasets/mcantoni81/twitter-supervised-dataset-prochoice-vs-prolife  
 
-[2]
+[2] saxena. (2021, February 6). Understanding Embedding Layer in Keras. Analytics Vidhya. https://medium.com/analytics-vidhya/understanding-embedding-layer-in-keras-bbe3ff1327ce
+
+[3] https://www.facebook.com/jason.brownlee.39. (2017, October 3). How to Use Word Embedding Layers for Deep Learning with Keras. Machine Learning Mastery. https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/
+
+[4] tf.keras.Input | TensorFlow Core v2.8.0. (n.d.). TensorFlow. https://www.tensorflow.org/api_docs/python/tf/keras/Input
+
+[5]   tf.keras.layers.Embedding | TensorFlow Core v2.9.1. (n.d.). TensorFlow. https://www.tensorflow.org/api_docs/python/tf/keras/layers/Embedding
+
+[6] tf.keras.layers.Bidirectional | TensorFlow Core v2.3.0. (n.d.). TensorFlow. https://www.tensorflow.org/api_docs/python/tf/keras/layers/Bidirectional
+
+[7] News API - A JSON API for live news and blog articles. (2019). News API - A JSON API for live news and blog articles. Newsapi.org. https://newsapi.org/
+
+[8] Team, K. (n.d.). Keras documentation: Embedding layer. Keras.io. https://keras.io/api/layers/core_layers/embedding/
 
 CSCI 5922-003 Neural Nets and Deep Learning ©2022
