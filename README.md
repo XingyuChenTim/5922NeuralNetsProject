@@ -65,7 +65,8 @@ Fig 5. Neural Net structure
 
 Backpropagation is a process that takes the error rate of forward propagation and feeds this loss backward through the neural network layers to fine-tune the weights. After iteration 1000, the total loss is 4840.21, and the average loss is 0.12. The accuracy score is 0.78, and the confusion matrix list below, along with the loss plots. There is an overfitting issue with this NN due to the simple net structure.
 
-[[10232 8087]
+[[10232 8087]  
+
 [16 19211]]
 
 ![original](img/fig_6.png)  
