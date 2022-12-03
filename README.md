@@ -32,6 +32,7 @@ The server will respond in JSON format with the date, title, headline, and sourc
 ![original](img/fig_3.png)  
 
 Fig 3. Dataset retrieved from API
+
 # Data Prep
 Preprocessing is a crucial step in processing text, especially for tweets. Use standard text preprocessing techniques and tweets-specific preprocessing techniques to preprocess tweets. The standard preprocessing technique uses NLTK (Natural Language Tool Kit) library. The tweets-specific preprocessing technique uses Regular Expression (re in python library).  
 
@@ -45,6 +46,7 @@ The DateTime module transforms the ‘date’ column into ‘hour’ and ‘mont
 7.	Remove stop words
 
 ![original](img/fig_4.png)  
+Fig 4. Preprocessed Dataset
 
 Then, we tokenize and vectorize text with stemming. The goal is to reduce inflectional forms and sometimes derivationally related forms of a word to a common base form. Here, we remove all columns containing numbers and any column with a name of 3 or smaller, like ‘it,’ ‘of,’ and ‘pre.’  
 
@@ -52,61 +54,31 @@ After we tokenize the text, we encode it into a 500 numeric length array to repr
 
 We also split the dataset into train, valid, and test data with a ratio of 60, 20, and 20. The shape will be (33624,12), (11208,12), and (11208,12) corresponding. Using vocab to convert reviews (text) into numerical form, Replacing each word with its corresponding integer index value from the vocabulary. Assign the max length of the vocab + 1 to words, not in the vocab. For the dataset from news API, we do similar preprocessing like tweets, but we focus on the title and headline.  
 
-# NN w/ BP Architecture and Design
+# Data Visual
 
-![original](img/fig_8.png)
+# Baseline: Neural Net w/ Backpropagation
 
-Fig 8. Neural Net structure
+Use preprocessed data to train a simple, one-layer NN with backpropagation, random weights, and biases. This model aims to set up a baseline that the model describes later, ideally providing better performance. This network will not use TensorFlow/Keras, Sklearn, or other packages. Here is the network structure:
 
-Iteration 1000
+![original](img/fig_5.png)  
+Fig 5. Neural Net structure  
 
-Total Loss: 4840.214395017918
-
-Average Loss: 0.12891424905497037
-
-The confusion matrix is:
+Backpropagation is a process that takes the error rate of forward propagation and feeds this loss backward through the neural network layers to fine-tune the weights. After iteration 1000, the total loss is 4840.21, and the average loss is 0.12. The accuracy score is 0.78, and the confusion matrix list below, along with the loss plots. There is an overfitting issue with this NN due to the simple net structure.
 
 [[10232 8087]
-
 [16 19211]]
 
-The accuracy score is:
+![original](img/fig_6.png)  
+Fig 6. Total loss
 
-0.7841847333937038
+![original](img/fig_7.png)  
+Fig 7. Average loss
 
-![original](img/fig_9.png)
+# Neural Nets
 
-Fig 9. Total loss
-
-![original](img/fig_10.png)
-
-Fig 10. Average Loss
-
-# Sample Execution
-
-TBD 
 
 # Conclusion
 
-This dataset is not intended to be used to take a position on the discussion on the right to abortion. I focus on the ethical arguments and underlying issues rather than on political considerations that might also be involved. This dataset takes its cue from this discussion to create a corpus of tweets that can be tagged a priori.
-
-I use neural networks intended to answer following questions:
-
-1. How is people reaction changes between dates?
-
-2. Can we use the neural net to predict tweets opinion?
-
-3. What is the frequency of tweets during the whole timeline?
-
-4. What are the words that contribute to pro-life/pro-choice
-
-For now, the epoch is 1000 and learning rate 0.01 with sample size 37,546, we get 78% accuracy. Parameter tuning will be used during next tasks.
-
-The network intended to predict the tweets is supporting pro-life or pro-choice, the input vector is retweet\_count, like\_count, words\_count, sentence\_length, and hour.
-
-##### Acknowledgment
-
-TBD
 
 ##### References
 
