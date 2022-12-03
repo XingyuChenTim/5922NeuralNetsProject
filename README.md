@@ -35,9 +35,7 @@ Fig 3. Dataset retrieved from API
 # Data Prep
 Preprocessing is a crucial step in processing text, especially for tweets. Use standard text preprocessing techniques and tweets-specific preprocessing techniques to preprocess tweets. The standard preprocessing technique uses NLTK (Natural Language Tool Kit) library. The tweets-specific preprocessing technique uses Regular Expression (re in python library).  
 
-The DateTime module transforms the ‘date’ column into ‘hour’ and ‘month.’ Moreover, use feature extracting to count words and sentence length to add more features to the dataset.  
-
-Here is the list of tweets-specific preprocessing tasks using a regular expression:  
+The DateTime module transforms the ‘date’ column into ‘hour’ and ‘month.’ Moreover, use feature extracting to count words and sentence length to add more features to the dataset. Here is the list of tweets-specific preprocessing tasks using a regular expression:  
 1.	Lowercasing all the letters
 2.	Remove mentions ‘@.’
 3.	Remove hashtags ‘#.’
