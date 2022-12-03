@@ -33,31 +33,26 @@ The server will respond in JSON format with the date, title, headline, and sourc
 
 Fig 3. Dataset retrieved from API
 # Data Prep
-I use datetime module to fix the formatting of the date column. I will also be using regular expressions to fix the structure of the text and remove unnecessary ascii symbols because tweets can contain a lot of things such as mentions, hashtags, links, punctuations, and etc. Here is the list of text preprocessing tasks:
+Preprocessing is a crucial step in processing text, especially for tweets. Use standard text preprocessing techniques and tweets-specific preprocessing techniques to preprocess tweets. The standard preprocessing technique uses NLTK (Natural Language Tool Kit) library. The tweets-specific preprocessing technique uses Regular Expression (re in python library).  
 
-1. Lowercasing all the letters
-2. Remove mentions '@'
-3. Remove hash tags '#'
-4. Remove URLs, start with 'http' or 'www'
-5. Remove punctuations
-6. Remove non-alphanumeric characters
-7. Remove stop words
+The DateTime module transforms the ‘date’ column into ‘hour’ and ‘month.’ Moreover, use feature extracting to count words and sentence length to add more features to the dataset.  
 
-![original](img/fig_4.png)
+Here is the list of tweets-specific preprocessing tasks using a regular expression:  
+1.	Lowercasing all the letters
+2.	Remove mentions ‘@.’
+3.	Remove hashtags ‘#.’
+4.	Remove links. Start with ‘HTTP’ or ‘www.’
+5.	Remove punctuations
+6.	Remove non-alphanumeric characters
+7.	Remove stop words
 
-Fig 4. Preprocess tweets based on tasks
+![original](img/fig_4.png)  
 
-![original](img/fig_5.png)
+Then, we tokenize and vectorize text with stemming. The goal is to reduce inflectional forms and sometimes derivationally related forms of a word to a common base form. Here, we remove all columns containing numbers and any column with a name of 3 or smaller, like ‘it,’ ‘of,’ and ‘pre.’  
 
-Fig 5. Preprocess text into numerical values
+After we tokenize the text, we encode it into a 500 numeric length array to represent the original text so the model can recognize them. We use the embedding (the matrix we made in the previous steps) to encode the text into an index inside the embedding. The padding method modifies that every encoded sentence will be the same length as 500. We append the ‘pad’ symbol if the length is less than 500 and get the first 500 tokens if the length is more significant than 500.  
 
-![original](img/fig_6.png)
-
-Fig 6. Train set
-
-![original](img/fig_7.png)
-
-Fig 7. Test set
+We also split the dataset into train, valid, and test data with a ratio of 60, 20, and 20. The shape will be (33624,12), (11208,12), and (11208,12) corresponding. Using vocab to convert reviews (text) into numerical form, Replacing each word with its corresponding integer index value from the vocabulary. Assign the max length of the vocab + 1 to words, not in the vocab. For the dataset from news API, we do similar preprocessing like tweets, but we focus on the title and headline.  
 
 # NN w/ BP Architecture and Design
 
