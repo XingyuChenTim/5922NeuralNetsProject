@@ -75,8 +75,68 @@ Fig 7. Average loss
 
 # Neural Nets
 
+Build four neural nets with preprocessed train/validation/test datasets for predicting pro-choice and pro-life based on TensorFlow and Keras (ANN, RNN, LSTM, CNN). Evaluate the model with a confusion matrix, loss, and accuracy with the sklearn library.  
+
+The network intended to predict the tweets support pro-life or pro-choice, and the input vector is retweet_count, like_count, words_count, sentence_length, and hour.  
+
+For Convolutional Neural Networks, we need to define the convolutional layer, a generalization of the Dense layer. The convolution means sliding a flipped kernel, so most of the library use cross-correlation to implement the convolution layer because it is sliding a kernel without a flip.  
+
+Recurrent Neural Networks maintain an internal state and will update at every step. The set of weights is the same across all time steps through the sequence. The first layer is the embedding layer, which will learn embeddings for different words.  
+
+We define input with the vocabulary size and length of input sequences. We define output with a dimension of dense embedding. It is the size of the vector space in embedded words and establishes the size of the output vectors from this layer for each word.  
+
+Embedding layer, the word with similar meanings or that often occurs together in similar contexts will have a similar vector representation based on how close or far apart those words are in their meanings. The most common feature vectors are Word2Vec from Google and GloVe from Stanford.  
+
+In an embedding, each dense vector represents the projection of the word into a continuous vector space. A word's position in the learned vector space is called its embedding. The dense layers require inputs such as batch size and input size.  
+
+For Long Short Term Memory Networks, it contains computational blocks that control information flow. The gates control information is added or removed through structures. It can forget irrelevant information, store relevant information from current input, update the cell state selectively and output a filtered version of the cell state.    
+
+The encoder LSTM processes the entire input sentence and encodes it into a context vector, which is the last hidden state of the LSTM/RNN. The final state is the initial hidden state of the decoder. The decoder LSTM/RNN produces the words in a sentence one after another.  
+
+	ANN	RNN	LSTM	CNN
+Train Loss	0.6287	0.4309	0.4575	0.3532
+Train Accuracy	0.6506	0.7700	0.7421	0.8123
+Validation Loss	0.6375	0.7246	0.7817	0.9974
+Validation Accuracy	0.6342	0.6158	0.6303	0.6115
+Test Loss	0.6375	0.7246	0.7816	0.9973
+Test Accuracy	0.6341	0.6158	0.6302	0.6115
+Table 1. Neural Nets Loss and Accuracy on Tweets
+
+	ANN	RNN
+Confusion Matrix	3227 1802
+2298 3881	3503 2284
+2022 3399
+LSTM	CNN
+Confusion Matrix	3590 2209
+1935 3474	3899 2728
+1626 2955
+Table 2. Confusion Matrix for detailed evaluation
+
+	ANN	RNN	LSTM	CNN
+Train Loss	0.7497	0.5714	0.6873	0.6715
+Train Accuracy	0.5131	0.7487	0.5654	0.6073
+Table 3. Loss and Accuracy on dataset gathered from API
+
+CNN perform better compared to other three neural nets; RNN and LSTM perform similar result due to similar structure. ANN is unstable neural nets because it may predict all labels as 0 or 1. On the other hand, RNNs perform better among all four neural nets in relatively more minor datasets with smaller batch sizes and learning rates.  
+
 
 # Conclusion
+
+Tweets exploratory data analysis is a challenging but also necessary task. In this paper, we have 56,040 tweets labeled pro-choice or pro-life, and 200 sample news titles and headlines labeled abortion or antiabortion. Five neural nets predict output from these data. They potentially benefit readers or decision-makers in the supreme court towards a better understanding of how the public sees and sees abortion in (digital) life.  
+
+This paper is not intended that take a position on the discussion on the right to abortion. Focus on the ethical arguments and underlying issues rather than on political considerations that might also be involved. This dataset takes its cue from this discussion to create a corpus of tweets that can be tagged a priori.  
+
+![original](img/fig_8.png)    
+Fig 8. Pro-life Word Cloud  
+
+![original](img/fig_9.png)    
+Fig 9. Pro-Choice Word Cloud  
+
+The top words for pro-life are people, right, children, and mother; meanwhile, the top words for pro-choice are women, decision, one, live, and believe. These words contribute to identifying pro-life/pro-choice labels.  
+
+Identifying pro-choice or pro-life in texts could be used in various applications like tweets sentiment analysis, argument faceted search, and value-based opinion profiling. It is important to note that these samples do not represent the user’s opinion but provide a benchmark for measuring classification robustness across sources.  
+
+For now, this paper introduced five neural nets, and the best neural nets provide around 80% accuracy with reasonable training time and memory space. A more significant community effort is needed to collect more solid datasets from a wider variety of sources besides Twitter.  
 
 
 ##### References
