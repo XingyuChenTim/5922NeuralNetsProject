@@ -93,28 +93,26 @@ For Long Short Term Memory Networks, it contains computational blocks that contr
 
 The encoder LSTM processes the entire input sentence and encodes it into a context vector, which is the last hidden state of the LSTM/RNN. The final state is the initial hidden state of the decoder. The decoder LSTM/RNN produces the words in a sentence one after another.  
 
-	ANN	RNN	LSTM	CNN
-Train Loss	0.6287	0.4309	0.4575	0.3532
-Train Accuracy	0.6506	0.7700	0.7421	0.8123
-Validation Loss	0.6375	0.7246	0.7817	0.9974
-Validation Accuracy	0.6342	0.6158	0.6303	0.6115
-Test Loss	0.6375	0.7246	0.7816	0.9973
-Test Accuracy	0.6341	0.6158	0.6302	0.6115
-Table 1. Neural Nets Loss and Accuracy on Tweets
+	ANN	    RNN	    LSTM	    CNN  
+Train Loss	0.6287	0.4309	0.4575	0.3532  
+Train Accuracy	0.6506	0.7700	0.7421	0.8123  
+Validation Loss	0.6375	0.7246	0.7817	0.9974  
+Validation Accuracy	0.6342	0.6158	0.6303	0.6115  
+Test Loss	0.6375	0.7246	0.7816	0.9973  
+Test Accuracy	0.6341	0.6158	0.6302	0.6115  
 
-	ANN	RNN
-Confusion Matrix	3227 1802
-2298 3881	3503 2284
-2022 3399
-LSTM	CNN
-Confusion Matrix	3590 2209
-1935 3474	3899 2728
-1626 2955
-Table 2. Confusion Matrix for detailed evaluation
+Table 1. Neural Nets Loss and Accuracy on Tweets  
 
-	ANN	RNN	LSTM	CNN
-Train Loss	0.7497	0.5714	0.6873	0.6715
-Train Accuracy	0.5131	0.7487	0.5654	0.6073
+	ANN	     RNN          LSTM        CNN    
+3227 1802   3503 2284    3590 2209     3899 2728  
+2298 3881   2022 3399    1935 3474     1626 2955  
+
+Table 2. Confusion Matrix for detailed evaluation  
+
+	ANN	RNN	LSTM	CNN  
+Train Loss	0.7497	0.5714	0.6873	0.6715  
+Train Accuracy	0.5131	0.7487	0.5654	0.6073  
+
 Table 3. Loss and Accuracy on dataset gathered from API
 
 CNN perform better compared to other three neural nets; RNN and LSTM perform similar result due to similar structure. ANN is unstable neural nets because it may predict all labels as 0 or 1. On the other hand, RNNs perform better among all four neural nets in relatively more minor datasets with smaller batch sizes and learning rates.  
