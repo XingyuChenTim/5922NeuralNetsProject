@@ -134,7 +134,25 @@ The top words for pro-life are people, right, children, and mother; meanwhile, t
 
 Identifying pro-choice or pro-life in texts could be used in various applications like tweets sentiment analysis, argument faceted search, and value-based opinion profiling. It is important to note that these samples do not represent the user’s opinion but provide a benchmark for measuring classification robustness across sources.  
 
+# Data Visual
+
 For now, this paper introduced five neural nets, and the best neural nets provide around 80% accuracy with reasonable training time and memory space. A more significant community effort is needed to collect more solid datasets from a wider variety of sources besides Twitter.  
+
+This paper does not intend to provide sentimental analysis for these tweets but give a data insight behind the texts. Using NLTK library to categorize each sample into positive, negative, and neutral sentiment. Then, using seaborn and Plotly library to visual the dataset.  
+
+![original](img/fig_10.png)  
+Fig 10. Count plot of sentiments of the data  
+
+![original](img/fig_11.png)  
+Fig 11. Sentence Length of based on date  
+
+![original](img/fig_12.png)  
+Fig 12. Sentence Length Distribution  
+
+![original](img/fig_13.png)  
+Fig 13. Activity all over the day  
+
+We can see that most tweets are negative sentiment toward to abortion topic and people continually tweets about it with length 20 ~ 50 sentence length. Most of tweets occurs afternoon or after 2 pm.  
 
 
 ##### References
